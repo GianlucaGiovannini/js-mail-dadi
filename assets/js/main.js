@@ -1,49 +1,61 @@
 /* Crea una lista con delle e-mail che possono accedere */
 const listEnableMail = ["gianluca@gmail.com", "giovannini@gmail.com", "user@gmail.com", "admin@gmail.com", "moderator@gmail.com", "default@gmail.com"]
 
+let userMail = prompt("Scrivi la tua e-mail per accedere");
+let loginEnable = false;
 /* se la sua e-mail è nella lista di chi può accedere allora stampa un messaggio appropriato sull'esito del controllo */
 
-for (let i = 0; i < listEnableMail.length; i++) {
-    // chiedo all'utente la sua e-mail
-    let userMail = prompt("Scrivi la tua e-mail per accedere")
-
-    let mailControl = listEnableMail[i]
+for (let i = 0; i <= listEnableMail.length; i++) {
+    let mailControl = listEnableMail;
 
     if (userMail == mailControl) {
-        alert("utente abilitato")
+        loginEnable = true;
+
     } else {
-        alert(`
-        Riprova ed utilizza una delle seguenti e-mail: 
-        ${listEnableMail[0]} 
-        ${listEnableMail[1]} 
-        ${listEnableMail[2]} 
-        ${listEnableMail[3]} 
-        ${listEnableMail[4]} 
-        ${listEnableMail[5]} 
-        `)
+        loginEnable = false;
     }
 }
 
+let stamp;
+if (loginEnable == false) {
+    stamp = "E-mail sbagliata, riprova ad inserirla"
+
+} else {
+    stamp = "Loggato con successo"
+}
+
+alert(stamp);
+
+
+
+
+
+
+
+
+/* 
+// aggancia un bottono e mettilo in ascolto per il click
 const elementNumber = document.querySelector("button");
 
 elementNumber.addEventListener("click",
     function() {
+        // assegna i numeri ai giocatori
         const numberBot = Math.round(Math.random() * 5 + 1);
-        document.querySelector(".bot-number").innerHTML = numberBot
+        document.querySelector(".bot-number").innerHTML = numberBot;
 
         const numberUser = Math.round(Math.random() * 5 + 1);
-        document.querySelector(".user-number").innerHTML = numberUser
-
+        document.querySelector(".user-number").innerHTML = numberUser;
+        // crea una variante da stampare e digli cosa ci deve essere scritto in base al risultato
         let risultato;
 
         if (numberBot < numberUser) {
-            risultato = "hai vinto"
+            risultato = "hai vinto";
         } else if (numberBot > numberUser) {
-            risultato = "hai perso"
+            risultato = "hai perso";
         } else {
-            risultato = "hai pareggiato"
+            risultato = "hai pareggiato";
         }
-
+        // stampa il risultato
         document.querySelector(".risultato").innerHTML = risultato;
     }
-)
+); */
