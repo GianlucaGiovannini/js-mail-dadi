@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.result {
+    color: blue;
+}
+
+.bg_a_caso {
+    background-color: rgb(67, 224, 159);
+}
