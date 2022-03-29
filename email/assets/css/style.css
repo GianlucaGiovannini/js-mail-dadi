@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
-.result {
-    color: blue;
+body {
+    background-color: rgb(170, 169, 233);
 }
 
-.bg_a_caso {
-    background-color: rgb(67, 224, 159);
+.color_success {
+    color: rgb(67, 224, 159);
+}
+
+.color_red {
+    color: red;
 }
